@@ -1,0 +1,32 @@
+{
+  "name": "toast-notify",
+  "version": "1.0.0",
+  "description": "Lightweight, customizable toast notifications with zero dependencies",
+  "main": "dist/toast-notify.min.js",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "uglifyjs src/toast-notify.js -o dist/toast-notify.min.js -c -m",
+    "build:css": "cleancss -o dist/toast-notify.min.css src/toast-notify.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dev-hridoy/toast-notify.git"
+  },
+  "keywords": [
+    "toast",
+    "notification",
+    "alert",
+    "javascript",
+    "lightweight"
+  ],
+  "author": "1dev-hridoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1dev-hridoy/toast-notify/issues"
+  },
+  "homepage": "https://github.com/1dev-hridoy/toast-notify#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4"
+  }
+} 

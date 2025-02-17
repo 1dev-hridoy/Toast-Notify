@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notify - Simple Toast Notifications Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/toast-notify.min.css">
+    <script src="./dist/toast-notify.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="border-b bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Toast Notify</h1>
+            <div class="flex items-center gap-4">
+                <!-- GitHub Star Button -->
+                <iframe src="https://ghbtns.com/github-btn.html?user=1dev-hridoy&repo=toast-notify&type=star&count=true&size=large" 
+                        frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Simple Toast Notifications</h2>
+            <p class="text-xl text-gray-600 mb-8">Lightweight, customizable toast notifications with zero dependencies</p>
+            
+            <!-- Demo Buttons -->
+            <div class="flex gap-3 justify-center mb-12">
+                <button onclick="toast.show('success', 'Success message here')" 
+                        class="px-4 py-2 bg-emerald-500 text-white font-semibold rounded-lg shadow-sm hover:bg-emerald-600 active:transform active:scale-95 transition-all">
+                    Show Success
+                </button>
+                <button onclick="toast.show('warning', 'Warning message here')" 
+                        class="px-4 py-2 bg-amber-500 text-white font-semibold rounded-lg shadow-sm hover:bg-amber-600 active:transform active:scale-95 transition-all">
+                    Show Warning
+                </button>
+                <button onclick="toast.show('error', 'Error message here')" 
+                        class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-sm hover:bg-red-600 active:transform active:scale-95 transition-all">
+                    Show Error
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Installation</h3>
+            <div class="bg-gray-900 rounded-lg p-6 mb-8">
+                <pre class="text-gray-300 overflow-x-auto"><code>&lt;!-- Add to your HTML head --&gt;
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/1dev-hridoy/toast-notify@main/dist/toast-notify.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/1dev-hridoy/toast-notify@main/dist/toast-notify.min.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Usage</h3>
+            <div class="bg-gray-900 rounded-lg p-6">
+                <pre class="text-gray-300 overflow-x-auto"><code>// Initialize
+const toast = new ToastNotify({
+    position: 'top-right', // top-right, top-left, bottom-right, bottom-left
+    duration: 5000 // Duration in milliseconds
+});
+
+// Show notifications
+toast.show('success', 'Success message');
+toast.show('warning', 'Warning message');
+toast.show('error', 'Error message');</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Features</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="font-bold text-lg mb-2">Lightweight</h4>
+                    <p class="text-gray-600">Minimal footprint with zero dependencies</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="font-bold text-lg mb-2">Customizable</h4>
+                    <p class="text-gray-600">Easy to customize positions and durations</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h4 class="font-bold text-lg mb-2">Simple API</h4>
+                    <p class="text-gray-600">Intuitive API for showing notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>Made with ❤️ by <a href="https://github.com/1dev-hridoy" class="text-blue-600 hover:underline">1dev-hridoy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize toast
+        const toast = new ToastNotify({
+            position: 'top-right',
+            duration: 5000
+        });
+    </script>
+</body>
+</html> 

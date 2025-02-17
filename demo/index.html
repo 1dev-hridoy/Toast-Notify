@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notify Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/toast-notify.css">
+    <script src="../src/toast-notify.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="flex gap-3">
+        <button onclick="toast.show('success', 'success message here')" 
+                class="px-4 py-2 bg-emerald-500 text-white font-semibold rounded-lg shadow-sm hover:bg-emerald-600 active:transform active:scale-95 transition-all">
+            Show Success
+        </button>
+        <button onclick="toast.show('warning', 'warning message here')" 
+                class="px-4 py-2 bg-amber-500 text-white font-semibold rounded-lg shadow-sm hover:bg-amber-600 active:transform active:scale-95 transition-all">
+            Show Warning
+        </button>
+        <button onclick="toast.show('error', 'error message here')" 
+                class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-sm hover:bg-red-600 active:transform active:scale-95 transition-all">
+            Show Error
+        </button>
+    </div>
+
+    <script>
+        // Initialize toast without auto-showing
+        const toast = new ToastNotify({
+            position: 'top-right',
+            duration: 5000
+        });
+    </script>
+</body>
+</html> 
